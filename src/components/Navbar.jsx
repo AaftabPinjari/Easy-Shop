@@ -1,9 +1,9 @@
 import { FaShoppingCart } from "react-icons/fa";
-import { NavLink, useNavigate } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom"
 import { fetchCategories } from "../redux/slice/categorySlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-
+import { FaGithub } from "react-icons/fa";
 
 
 
@@ -59,13 +59,19 @@ function Navbar() {
                     <li><NavLink to='/cart'><FaShoppingCart size={20} /></NavLink></li>
                 </ul>
             </div>
-            <div>
-                <form className="flex justify-center mt-2 ">
+            <div className="flex items-center">
+                <form className="flex justify-center mt-2 w-5/6 ">
                     <input
                         className="outline-none w-1/2 rounded py-1 px-3 border-[1px] border-gray-400"
                         placeholder="Search Products"
                     />
                 </form>
+                <Link
+                    className="w-1/6"
+                    to={"https://github.com/AaftabPinjari/Easy-Shop"}>
+                    <FaGithub
+                        size={30}
+                    /></Link>
             </div>
 
         </nav>

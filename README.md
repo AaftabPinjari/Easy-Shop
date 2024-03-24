@@ -6,4 +6,4 @@ This project gave me deep understandin how Redux toolkit manages the state of an
 
 
 
-[Project Live](https://easy-shop.netlify.app) Please do Visit!
+[Project Live](https://easy-shop-app.netlify.app) Please do Visit!

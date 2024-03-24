@@ -31,9 +31,6 @@ function Navbar() {
                     </NavLink>
                 </h1>
                 <ul className="flex items-center gap-4 ">
-                    <li
-                        className="text-md md:text-lg font-semibold"
-                    ><NavLink to='/'>All</NavLink></li>
 
                     <li className="text-sm font-semibold">
                         <select

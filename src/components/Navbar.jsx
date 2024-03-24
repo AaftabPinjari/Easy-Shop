@@ -11,6 +11,7 @@ function Navbar() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const { categories } = useSelector(state => state.categories)
+    const { cart } = useSelector(state => state.cart)
 
     useEffect(() => {
         dispatch(fetchCategories())
@@ -30,7 +31,7 @@ function Navbar() {
                         Easy Shop
                     </NavLink>
                 </h1>
-                <ul className="flex items-center gap-4 ">
+                <ul className="flex items-center  ">
 
                     <li className="text-sm font-semibold">
                         <select
@@ -53,7 +54,10 @@ function Navbar() {
                     </li>
 
 
-                    <li><NavLink to='/cart'><FaShoppingCart size={20} /></NavLink></li>
+                    <li
+                        className="ml-3"
+                    ><NavLink to='/cart'><FaShoppingCart size={20} /></NavLink></li>
+                    <li>({cart.length})</li>
                 </ul>
             </div>
             <div className="flex items-center">

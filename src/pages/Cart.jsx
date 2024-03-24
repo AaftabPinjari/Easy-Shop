@@ -1,17 +1,30 @@
 import { useDispatch, useSelector } from "react-redux"
 import { removeFromCart } from "../redux/slice/cartSlice"
 import { MdRemoveShoppingCart } from "react-icons/md"
+import { useState } from "react"
+import { useEffect } from "react"
 
 function Cart() {
+    const [totalPrice, setTotalPrice] = useState(0)
+    const { cart } = useSelector(state => state.cart)
+
+    useEffect(() => {
+        setTotalPrice(cart.reduce((acc, curr) => acc + curr.price, 0))
+    }, [cart])
+
+    // console.log(totalPrice)
+
+
 
     const dispatch = useDispatch()
 
-    const { cart } = useSelector(state => state.cart)
-    console.log(cart)
+    // console.log(cart)
 
     return (
-        <div>
-            <h1 className="text-3xl font-bold my-4">Your Shopping Cart</h1>
+        <div className="flex flex-col min-h-96 justify-between pb-4">
+            <div>
+                <h1 className="text-xl md:text-2xl lg:text-3xl font-bold my-4">Your Shopping Cart</h1>
+            </div>
 
             <div>
                 {cart && cart.length > 0 ?
@@ -48,7 +61,12 @@ function Cart() {
                             </div>
                         ))}
 
-                    </div> : <>Its very Empty Here</>}
+                    </div> : <div className="text-center text-xl">Its very Empty Here</div>}
+
+            </div>
+            <div className=" mt-3 flex w-full justify-between">
+                <h2><span className="font-semibold">Total Price</span> : {totalPrice} $</h2>
+                <h2><span className="font-semibold">Total Quantity</span>: {cart.length}</h2>
             </div>
 
 

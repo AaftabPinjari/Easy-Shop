@@ -1,8 +1,9 @@
-# React + Vite
+# Easy Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This Project focuses on Redux toolkit (RTK) to manage state of an E-commerce Platform with styling from TailwindCSS.
+There are three slices created for different aspects of the ecommerce app namely pproductsSlice, cartSlice and CategoriesSlice.
+This project gave me deep understandin how Redux toolkit manages the state of an app and how smooth it makes to access the state in different components of the app.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+[Project Live](https://easy-shop.netlify.app) Please do Visit!

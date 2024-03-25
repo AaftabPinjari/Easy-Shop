@@ -10,7 +10,7 @@ const initialState = {
 //action to fetch the todos
 export const fetchCategories = createAsyncThunk("fetchCategories",
     async () => {
-        const response = await fetch('https://dummyjson.com/products/categories')
+        const response = await fetch('https://fakestoreapi.com/products/categories')
         return response.json()
     })
 

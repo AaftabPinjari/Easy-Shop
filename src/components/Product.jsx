@@ -18,13 +18,13 @@ function Product({ product }) {
         <div
             className=" h-[300px] w-[300px] py-3
         flex flex-col items-center justify-between 
-        font-semibold 
+        font-semibold  
         "
         >
             <div>
                 <img
-                    className="h-[200px] w-[250px] rounded-lg"
-                    src={product.thumbnail} />
+                    className="h-[200px] w-[150px]  rounded-lg"
+                    src={product.image} />
             </div>
             <div className="flex justify-between w-full px-1 items-center">
                 <h2 className="text-lg truncate w-2/3">{product.title}</h2>

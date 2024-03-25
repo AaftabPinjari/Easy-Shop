@@ -11,7 +11,7 @@ function Home() {
         dispatch(fetchProducts())
     }, [])
 
-    const { products } = useSelector(state => state.products.products)
+    const { products } = useSelector(state => state.products)
 
     // console.log(products)
     return (

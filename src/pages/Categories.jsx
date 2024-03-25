@@ -7,12 +7,16 @@ import Product from "../components/Product"
 function Category() {
 
     const { id } = useParams()
+
+    let newId = id.replace("%20", " ")
+    console.log(newId)
+
     // const navigate = useNavigate()
     console.log(id)
 
 
 
-    const { products } = useSelector(state => state.products.products)
+    const { products } = useSelector(state => state.products)
 
 
 
@@ -23,7 +27,7 @@ function Category() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-2">
                     {products.map((product) => (
 
-                        product.category === id ? <Product key={product.id} product={product} /> : null
+                        product.category === String(newId) ? <Product key={product.id} product={product} /> : null
 
                     ))}
                 </div>

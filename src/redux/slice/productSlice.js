@@ -11,8 +11,10 @@ const initialState = {
 export const fetchProducts = createAsyncThunk("fetchTodos",
     //async call back function for API calling    
     async () => {
-        const response = await fetch('https://dummyjson.com/products?limit=100')
-        return response.json()
+        const response = await fetch('https://fakestoreapi.com/products')
+        const result = await response.json()
+        console.log(result)
+        return result
     }
 )
 
